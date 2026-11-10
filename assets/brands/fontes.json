@@ -1,0 +1,65 @@
+{
+  "data_pesquisa": "2026-11-09",
+  "marcas": [
+    {
+      "marca": "Suvinil",
+      "arquivo": "suvinil.svg",
+      "fonte": "https://www.suvinil.com.br/",
+      "observacao": "SVG do cabeçalho oficial"
+    },
+    {
+      "marca": "Coral",
+      "arquivo": "coral.png",
+      "fonte": "https://www.coral.com.br/pt",
+      "observacao": "PNG transparente"
+    },
+    {
+      "marca": "Eucatex",
+      "arquivo": "eucatex.webp",
+      "fonte": "https://www.eucatex.com.br/tintas/",
+      "observacao": "WebP transparente"
+    },
+    {
+      "marca": "3M",
+      "arquivo": "3m.jpg",
+      "fonte": "https://news.3m.com/logos",
+      "observacao": "JPG de alta resolução — Media Gallery"
+    },
+    {
+      "marca": "PPG",
+      "arquivo": "ppg.svg",
+      "fonte": "https://www.ppg.com/",
+      "observacao": "SVG do site oficial"
+    },
+    {
+      "marca": "Norton",
+      "arquivo": "norton.png",
+      "fonte": "https://www.marca.nortonabrasives.com.br/",
+      "observacao": "PNG — opção de cor padrão do Brand Center"
+    },
+    {
+      "marca": "Sherwin-Williams",
+      "arquivo": "sherwin-williams.png",
+      "fonte": "https://www.sherwin-auto.com.br/",
+      "observacao": "Assinatura Automotive Finishes em PNG"
+    },
+    {
+      "marca": "Lazzuril",
+      "arquivo": "lazzuril.svg",
+      "fonte": "https://www.sherwin-auto.com.br/wp-content/uploads/2020/07/Logotipo-Lazzuril.zip",
+      "observacao": "SVG exportado do PDF vetorial oficial; PDF e AI preservados"
+    },
+    {
+      "marca": "Vonixx",
+      "arquivo": "vonixx.webp",
+      "fonte": "https://vonixx.com.br/",
+      "observacao": "Versão branca oficial; exibir sobre fundo escuro"
+    },
+    {
+      "marca": "Tigre",
+      "arquivo": "tigre.svg",
+      "fonte": "https://www.tigre.com.br/",
+      "observacao": "SVG branco do cabeçalho oficial; exibir sobre fundo escuro"
+    }
+  ]
+}

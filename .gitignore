@@ -1,0 +1,11 @@
+docs/
+desktop.png
+mobile.png
+previa-tjtintas.pdf
+verify-layout.cjs
+node_modules/
+.env
+.env.*
+!.env.example
+Thumbs.db
+.DS_Store
