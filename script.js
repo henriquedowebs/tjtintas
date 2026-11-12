@@ -1,6 +1,34 @@
 /* TJ Tintas — interações nativas, sem bibliotecas. */
 'use strict';
 
+// Hero: primeira foto fixa no HTML, troca suave e pausa acessível.
+(() => {
+  const hero = document.getElementById('hero');
+  const slides = [...hero.querySelectorAll('.hero-slide')];
+  const dots = [...hero.querySelectorAll('[data-hero-slide]')];
+  const pause = hero.querySelector('.hero-pause');
+  if (slides.length < 2 || !pause) return;
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let index = 0, paused = reduced.matches, timer;
+  function show(next) {
+    index = (next + slides.length) % slides.length;
+    slides.forEach((slide, i) => slide.classList.toggle('is-active', i === index));
+    dots.forEach((dot, i) => dot.setAttribute('aria-pressed', String(i === index)));
+  }
+  function schedule() {
+    clearInterval(timer);
+    if (!paused && !document.hidden) timer = setInterval(() => show(index + 1), 6000);
+    pause.textContent = paused ? '▶' : 'Ⅱ';
+    pause.setAttribute('aria-pressed', String(paused));
+    pause.setAttribute('aria-label', paused ? 'Retomar troca automática' : 'Pausar troca automática');
+  }
+  dots.forEach((dot, i) => dot.addEventListener('click', () => { show(i); schedule(); }));
+  pause.addEventListener('click', () => { paused = !paused; schedule(); });
+  document.addEventListener('visibilitychange', schedule);
+  reduced.addEventListener('change', () => { paused = reduced.matches; schedule(); });
+  schedule();
+})();
+
 const toggle = document.getElementById('mobile-toggle');
 const navigation = document.getElementById('main-nav');
 
