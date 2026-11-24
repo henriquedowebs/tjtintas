@@ -1,6 +1,18 @@
 /* TJ Tintas — interações nativas, sem bibliotecas. */
 'use strict';
 
+document.querySelectorAll('.product-carousel').forEach(carousel => {
+  const photos = [...carousel.querySelectorAll('.product-slide')];
+  let current = 0;
+  carousel.querySelectorAll('[data-product-step]').forEach(button => {
+    button.addEventListener('click', () => {
+      current = (current + Number(button.dataset.productStep) + photos.length) % photos.length;
+      photos.forEach((photo, index) => { photo.hidden = index !== current; });
+      carousel.querySelector('.product-photo-count').textContent = `${current + 1} / ${photos.length}`;
+    });
+  });
+});
+
 // Hero: primeira foto fixa no HTML, troca suave e pausa acessível.
 (() => {
   const hero = document.getElementById('hero');
